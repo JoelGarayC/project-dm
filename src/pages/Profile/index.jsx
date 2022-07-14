@@ -22,7 +22,10 @@ const Profile = () => {
       function () {
         console.log("logout");
         window.tp.pianoId.logout();
-        navigate('/', { replace: true })
+        window.location.href = "/";
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
       },
     ]);
   };
