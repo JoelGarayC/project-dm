@@ -16,7 +16,6 @@
     --background-color: #292929;
     --text-color: #f1f1f1;
     --gray-color: #363636;
-    --primary-color: #dfb408;
   }
 }
 
@@ -36,6 +35,10 @@ body {
 
 main {
   min-height: 85vh;
+}
+
+a {
+  color: var(--text-color);
 }
 
 .wrapper {

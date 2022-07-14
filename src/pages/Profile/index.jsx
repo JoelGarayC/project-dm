@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { DataContext } from '../../context/DataContext';
+import styles from './profile.module.css'
 
 const Profile = () => {
 
   const navigate = useNavigate();
-
   const { setIsLogged } = useContext(DataContext)
 
   useEffect(() => {
@@ -35,9 +35,9 @@ const Profile = () => {
   };
 
   return (
-    <main className='wrapper'>
+    <main className={`wrapper ${styles.profile}`}>
       <div>
-        <button onClick={PianoLogout}>Salir</button>
+        <a onClick={PianoLogout}>Salir</a>
       </div>
       <div id='my-account'></div>
     </main>
