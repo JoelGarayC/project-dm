@@ -19,8 +19,8 @@ const Profile = () => {
       function () {
         console.log("logout");
         window.tp.pianoId.logout();
-        window.location.reload();
         window.location.href = "/";
+        window.location.reload();
       },
     ]);
   };
