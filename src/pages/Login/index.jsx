@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const PianoLogin = () => {
     console.log("login");
     // const tp = window.tp || [];
@@ -20,10 +24,11 @@ const Login = () => {
               " logged in with token",
               data.token
             );
-            window.location.href = "/";
-            setTimeout(() => {
-              window.location.reload();
-            }, 1000);
+            
+            navigate("/", { replace: true });
+            // setTimeout(() => {
+            //   window.location.reload();
+            // }, 1000);
             // setNameUser(data.user.given_name);
           },
           //Set the CSS and HTML here for what the signup button should look like when the user is logged in
