@@ -6,7 +6,6 @@ import styles from './header.module.css'
 const Header = () => {
 
   const { isLogged } = useContext(DataContext);
-
   
   return (
     <header>
@@ -19,9 +18,9 @@ const Header = () => {
         <nav className={styles.header__nav}>
           {
             isLogged ? (
-                <Link to="/profile">INICIA SESIÓN</Link>
+                <Link to="/profile">PERFIL</Link>
               ) : (
-                <button onClick={PianoLogin}>INICIA SESIÓN</button>
+                <Link to='/login'>INICIA SESIÓN</Link>
               ) 
           }
         </nav>
