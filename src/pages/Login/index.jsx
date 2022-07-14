@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { DataContext } from '../../context/DataContext';
 
 const Login = () => {
 
   const navigate = useNavigate();
+
+  const { setIsLogged } = useContext(DataContext)
 
   const PianoLogin = () => {
     console.log("login");
@@ -24,12 +27,12 @@ const Login = () => {
               " logged in with token",
               data.token
             );
-            
+
             navigate("/", { replace: true });
             // setTimeout(() => {
             //   window.location.reload();
             // }, 1000);
-            // setNameUser(data.user.given_name);
+            console.log(data.user.given_name);
           },
           //Set the CSS and HTML here for what the signup button should look like when the user is logged in
           //e.g. unhide the signout button, hide the sign-in button
@@ -49,7 +52,7 @@ const Login = () => {
   }, [])
 
   return (
-    
+
     <main className='wrapper'>
       <div id='login-form'></div>
     </main>
