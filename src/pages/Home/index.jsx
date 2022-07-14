@@ -5,8 +5,10 @@ const Home = () => {
 
   const { name } = useContext(DataContext)
 
+  let res = localStorage.getItem('name')
+
   return (
-    <main className='wrapper'>Bienvenido {name}</main>
+    <main className='wrapper'>Bienvenido {res}</main>
   )
 }
 

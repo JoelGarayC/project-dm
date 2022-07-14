@@ -28,6 +28,7 @@ const Login = () => {
               data.token
             );
             setName(data.user.given_name);
+            localStorage.setItem("name", data.user.given_name)
             navigate("/", { replace: true });
             // setTimeout(() => {
             //   window.location.reload();
