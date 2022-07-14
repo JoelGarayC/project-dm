@@ -20,7 +20,9 @@ const Profile = () => {
         console.log("logout");
         window.tp.pianoId.logout();
         window.location.href = "/";
-        window.location.reload();
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
       },
     ]);
   };

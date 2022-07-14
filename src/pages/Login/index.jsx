@@ -21,7 +21,9 @@ const Login = () => {
               data.token
             );
             window.location.href = "/";
-            // window.location.reload();
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
             // setNameUser(data.user.given_name);
           },
           //Set the CSS and HTML here for what the signup button should look like when the user is logged in

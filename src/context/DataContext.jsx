@@ -1,5 +1,3 @@
-//context-jsx
-
 
 import { createContext, useState } from 'react';
 
