@@ -39,6 +39,8 @@ main {
 
 a {
   color: var(--text-color);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .wrapper {
