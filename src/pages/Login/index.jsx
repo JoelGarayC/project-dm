@@ -8,9 +8,8 @@ const Login = () => {
 
   const { setIsLogged } = useContext(DataContext)
 
-  const PianoLogin = (e) => {
+  const PianoLogin = () => {
     console.log("login");
-    e.preventDefault();
     // const tp = window.tp || [];
     window.tp.push([
       "init",
