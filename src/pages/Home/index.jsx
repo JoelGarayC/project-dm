@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { DataContext } from "../../context/DataContext"
+import styles from './home.module.css'
 
 const Home = () => {
 
@@ -9,7 +10,7 @@ const Home = () => {
 
   return (
     
-      <main className='wrapper'>
+      <main className={`wrapper ${styles.home}`}>
         {
           isLogged ?
           <div>
@@ -17,7 +18,7 @@ const Home = () => {
           </div>
           :
           <div>
-            <h1>No estas logueado</h1>
+            <p>No estas logueado</p>
           </div>
         }
       </main>
