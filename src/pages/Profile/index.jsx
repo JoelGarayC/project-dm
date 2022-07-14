@@ -11,9 +11,25 @@ const Profile = () => {
       });
     }]);
   },[])
+
+  const PianoLogout = () => {
+    // const tp = window.tp || [];
+    window.tp.push([
+      "init",
+      function () {
+        console.log("logout");
+        window.tp.pianoId.logout();
+        window.location.reload();
+        window.location.href = "/";
+      },
+    ]);
+  };
+
   return (
-    <main>
-      <p>mi perfil</p>
+    <main className='wrapper'>
+      <div>
+        <button onClick={PianoLogout}>Salir</button>
+      </div>
       <div id='my-account'></div>
     </main>
   )
