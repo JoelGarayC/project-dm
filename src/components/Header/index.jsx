@@ -5,7 +5,7 @@ import styles from './header.module.css'
 
 const Header = () => {
 
-  const { isLogged, setIsLogged } = useContext(DataContext);
+  const { isLogged, setNameUser, nameUser } = useContext(DataContext);
 
   const PianoLogin = () => {
     console.log("login");
@@ -27,6 +27,7 @@ const Header = () => {
               data.token
             );
             setNameUser(data.user.given_name);
+            window.location.reload();
           },
           //Set the CSS and HTML here for what the signup button should look like when the user is logged in
           //e.g. unhide the signout button, hide the sign-in button
@@ -51,7 +52,7 @@ const Header = () => {
         <nav className={styles.header__nav}>
           {
             isLogged ? (
-                <Link to="/profile">Mi perfil</Link>
+                <Link to="/profile">{nameUser}</Link>
               ) : (
                 <button onClick={PianoLogin}>INICIA SESIÓN</button>
               ) 
