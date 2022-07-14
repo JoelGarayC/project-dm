@@ -22,7 +22,7 @@ const Profile = () => {
       function () {
         console.log("logout");
         window.tp.pianoId.logout();
-        window.location.href = "/";
+        navigate('/', { replace: true })
         setTimeout(() => {
           navigate('/', { replace: true })
         }, 1000);
