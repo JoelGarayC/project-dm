@@ -8,9 +8,20 @@ const Home = () => {
   let res = localStorage.getItem('name')
 
   return (
-    isLogged ?
-      <main className='wrapper'>Bienvenido {res}</main>
-      : null
+    
+      <main className='wrapper'>
+        {
+          isLogged ?
+          <div>
+            <h1>Bienvenido {res}</h1>
+          </div>
+          :
+          <div>
+            <h1>No estas logueado</h1>
+          </div>
+        }
+      </main>
+  
   )
 }
 

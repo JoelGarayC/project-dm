@@ -27,10 +27,9 @@ const Profile = () => {
         window.tp.pianoId.logout();
         localStorage.clear('name');
         setIsLogged(false)
-        window.location.href = "/";
-        setTimeout(() => {
-          navigate('/', { replace: true })
-        }, 1000);
+    
+        navigate('/', { replace: true })
+   
       },
     ]);
   };
