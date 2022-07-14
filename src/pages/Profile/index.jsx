@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     tp = window["tp"] || [];
-    tp.push(["init", function() {
+    tp.push(["init", function () {
       tp.myaccount.show({
-          displayMode: "inline",
-          containerSelector: "#my-account"
+        displayMode: "inline",
+        containerSelector: "#my-account"
       });
     }]);
-  },[])
+  }, [])
 
   const PianoLogout = () => {
     // const tp = window.tp || [];
@@ -19,10 +22,7 @@ const Profile = () => {
       function () {
         console.log("logout");
         window.tp.pianoId.logout();
-        window.location.href = "/";
-        setTimeout(() => {
-          window.location.reload();
-        }, 1000);
+        navigate('/', { replace: true })
       },
     ]);
   };
