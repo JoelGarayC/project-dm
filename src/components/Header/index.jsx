@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom'
+import { DataContext } from '../../context/DataContext';
 import styles from './header.module.css'
 
 const Header = () => {
+
+  const { isLogged, setIsLogged } = useContext(DataContext);
+
   const PianoLogin = () => {
     console.log("login");
     // const tp = window.tp || [];
@@ -44,7 +49,13 @@ const Header = () => {
           </Link>
         </div>
         <nav className={styles.header__nav}>
-          <button onClick={PianoLogin}>INICIA SESIÓN</button>
+          {
+            isLogged ? (
+                <Link to="/profile">Mi perfil</Link>
+              ) : (
+                <button onClick={PianoLogin}>INICIA SESIÓN</button>
+              ) 
+          }
         </nav>
       </div>
     </header>
