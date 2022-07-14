@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { DataContext } from '../../context/DataContext';
 
 const Login = () => {
 
   const navigate = useNavigate();
+
+  const { setIsLogged } = useContext(DataContext)
 
   const PianoLogin = () => {
     console.log("login");
@@ -24,6 +27,7 @@ const Login = () => {
               " logged in with token",
               data.token
             );
+            setIsLogged(true);
             localStorage.setItem("name", data.user.given_name)
             navigate("/", { replace: true });
             // setTimeout(() => {

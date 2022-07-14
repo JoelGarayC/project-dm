@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { DataContext } from '../../context/DataContext';
 
 const Profile = () => {
 
   const navigate = useNavigate();
+
+  const { setIsLogged } = useContext(DataContext)
 
   useEffect(() => {
     tp = window["tp"] || [];
@@ -23,6 +26,7 @@ const Profile = () => {
         console.log("logout");
         window.tp.pianoId.logout();
         localStorage.clear('name');
+        setIsLogged(false)
         window.location.href = "/";
         setTimeout(() => {
           navigate('/', { replace: true })
