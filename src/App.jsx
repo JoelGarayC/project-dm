@@ -6,9 +6,9 @@ import AppRoutes from "./routes/AppRoutes";
 
 function App() {
 
-  const {isLogged, setIsLogged} = useContext(DataContext);
+  const { isLogged, setIsLogged } = useContext(DataContext);
 
-  
+
 
   useEffect(() => {
     (function (src) {

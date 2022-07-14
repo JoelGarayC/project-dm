@@ -27,12 +27,11 @@ const Login = () => {
               " logged in with token",
               data.token
             );
-
+            setIsLogged(data.user.given_name);
             navigate("/", { replace: true });
             // setTimeout(() => {
             //   window.location.reload();
             // }, 1000);
-            console.log(data.user.given_name);
           },
           //Set the CSS and HTML here for what the signup button should look like when the user is logged in
           //e.g. unhide the signout button, hide the sign-in button
