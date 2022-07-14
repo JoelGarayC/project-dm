@@ -20,7 +20,10 @@ const Header = () => {
             isLogged ? (
                 <Link to="/profile">PERFIL</Link>
               ) : (
-                <Link to='/login'>INICIA SESIÓN</Link>
+                <>
+                  <Link to='/login'>INICIA SESIÓN</Link>
+                  <Link to='/register'>REGÍSTRATE</Link>
+                </>
               ) 
           }
         </nav>
