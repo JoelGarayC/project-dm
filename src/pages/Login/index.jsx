@@ -20,6 +20,7 @@ const Login = () => {
               " logged in with token",
               data.token
             );
+            window.location.href = "/";
             // setNameUser(data.user.given_name);
           },
           //Set the CSS and HTML here for what the signup button should look like when the user is logged in
