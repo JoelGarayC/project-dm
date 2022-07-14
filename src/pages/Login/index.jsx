@@ -6,7 +6,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const { setIsLogged } = useContext(DataContext)
+  const { setName } = useContext(DataContext)
 
   const PianoLogin = () => {
     console.log("login");
@@ -27,7 +27,7 @@ const Login = () => {
               " logged in with token",
               data.token
             );
-            setIsLogged(data.user.given_name);
+            setName(data.user.given_name);
             navigate("/", { replace: true });
             // setTimeout(() => {
             //   window.location.reload();

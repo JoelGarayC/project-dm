@@ -9,7 +9,6 @@ function App() {
   const { isLogged, setIsLogged } = useContext(DataContext);
 
 
-  console.log(isLogged)
 
   useEffect(() => {
     (function (src) {
@@ -24,6 +23,13 @@ function App() {
     setTimeout(() => {
       const tp = window.tp || [];
       tp.push(["setCookieDomain", "project-dm.vercel.app"]);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    console.log('el usuario esta logueado?', isLogged);
+    setTimeout(() => {
+      setIsLogged(tp.pianoId.isUserValid());
     }, 1000);
   }, []);
 
