@@ -1,12 +1,9 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { DataContext } from '../../context/DataContext';
 
 const Login = () => {
 
   const navigate = useNavigate();
-
-  const { setName } = useContext(DataContext)
 
   const PianoLogin = () => {
     console.log("login");
@@ -27,7 +24,6 @@ const Login = () => {
               " logged in with token",
               data.token
             );
-            setName(data.user.given_name);
             localStorage.setItem("name", data.user.given_name)
             navigate("/", { replace: true });
             // setTimeout(() => {
@@ -40,6 +36,7 @@ const Login = () => {
           loggedOut: function () {
             // callback cierra sesion
             console.log("el usuario ah salido!");
+            localStorage.removeItem('name');
             //Set the CSS and HTML here for what the signup button should look like when the user is logged out //e.g. unhide the sign in button, hide the signout button
           },
         });
