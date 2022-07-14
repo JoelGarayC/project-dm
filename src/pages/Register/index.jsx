@@ -23,7 +23,7 @@ const Register = () => {
   }, [])
 
   return (
-    <main>
+    <main className='wrapper'>
       <div id='register-form'></div>
     </main>
 
