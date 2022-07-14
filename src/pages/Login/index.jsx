@@ -20,6 +20,7 @@ const Login = () => {
               " logged in with token",
               data.token
             );
+            window.location.reload();
             window.location.href = "/";
             // setNameUser(data.user.given_name);
           },
