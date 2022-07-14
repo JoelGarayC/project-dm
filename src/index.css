@@ -2,16 +2,21 @@
   
   font-family: "Lato", "Helvetica", sans-serif;
 
+  --black-color: #1b1b1b;
+
   --background-color: #fafafa;
   --text-color: #1b1b1b;
   --gray-color: #f5f5f5;
+  --primary-color: #f7c600;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #242424;
+    --background-color: #292929;
     --text-color: #f1f1f1;
-    --gray-color: #2c2c2c;
+    --gray-color: #363636;
+    --primary-color: #dfb408;
   }
 }
 

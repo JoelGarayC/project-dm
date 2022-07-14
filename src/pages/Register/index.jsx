@@ -21,9 +21,9 @@ const Register = () => {
   PianoLogin();
 
   return (
-    <div>
+    <main>
 
-    </div>
+    </main>
 
 
   )
