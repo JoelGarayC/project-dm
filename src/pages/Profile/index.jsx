@@ -24,7 +24,7 @@ const Profile = () => {
         window.tp.pianoId.logout();
         window.location.href = "/";
         setTimeout(() => {
-          window.location.reload();
+          navigate('/', { replace: true })
         }, 1000);
       },
     ]);
